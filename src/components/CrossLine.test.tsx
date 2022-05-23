@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen } from "@testing-library/react";
 import { WINNING_LINES } from "../model/T3GameModel";
 import CrossLine from "./CrossLine";
