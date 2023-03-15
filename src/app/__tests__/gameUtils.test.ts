@@ -1,5 +1,5 @@
-import { GAME_TURNS_ORDER } from "../model/T3GameModel";
-import { getInitialCellsValues, getPlayerMark } from "./gameUtils";
+import { GAME_TURNS_ORDER } from "../../model/T3GameModel";
+import { getInitialCellsValues, getPlayerMark } from "../gameUtils";
 
 test('getPlayerMark returns FIRST element of GAME_TURNS_ORDER for an even number',()=> {
   [0,2,4,6,8].forEach((num:number)=>

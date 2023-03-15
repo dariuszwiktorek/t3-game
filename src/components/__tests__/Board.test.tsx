@@ -1,11 +1,11 @@
 import React from 'react';
 import { fireEvent, render, screen } from "@testing-library/react";
-import Board from "./Board";
-import { CellsValues, CellValue } from '../model/T3GameModel'
-import { getInitialCellsValues } from '../app/gameUtils';
+import Board from "../Board";
+import { CellsValues, CellValue } from '../../model/T3GameModel'
+import { getInitialCellsValues } from '../../app/gameUtils';
 
 
-jest.mock('./Cell', () => ({
+jest.mock('../Cell', () => ({
   value,
   ...rest
 }:{ 

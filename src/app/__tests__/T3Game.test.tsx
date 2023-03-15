@@ -1,13 +1,19 @@
-import { render, screen } from "@testing-library/react";
-import T3Game from "./T3Game";
 
-jest.mock('../components/Status', () => (props)=> {
+import { render, screen } from "@testing-library/react";
+import { GameResult, WinningLine } from "../../model/T3GameModel";
+import T3Game from "../T3Game";
+
+
+jest.mock('../../components/Status', () => (props: {
+  gameResult:GameResult,
+  movesCount:number,
+})=> {
   return (<mock-status data-testid='status' {...props} />)
 });
-jest.mock('../components/CrossLine', () => (props)=> {
+jest.mock('../../components/CrossLine', () => (props: {winningLine: WinningLine})=> {
   return (<mock-cross-line data-testid='cross-line' {...props} />)
 });
-jest.mock('../components/Board', () => (props)=> {
+jest.mock('../../components/Board', () => (props)=> {
   return (<mock-board data-testid='board' {...props} />)
 });
 const MOCKED_VALUES = {
@@ -17,7 +23,7 @@ const MOCKED_VALUES = {
   movesCount: 'mocked moves count', 
   handleCellClick: 'mocked onCellClick handler',
 }
-jest.mock('./useT3GameStage', () => ()=> {
+jest.mock('../useT3GameStage', () => ()=> {
   return {...MOCKED_VALUES}
 });
 

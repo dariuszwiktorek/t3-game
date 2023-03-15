@@ -1,8 +1,8 @@
 import { renderHook } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
-import { GameResult } from "../model/T3GameModel";
-import { getInitialCellsValues } from "./gameUtils";
-import useT3GameStage from "./useT3GameStage";
+import { GameResult } from "../../model/T3GameModel";
+import { getInitialCellsValues } from "../gameUtils";
+import useT3GameStage from "../useT3GameStage";
 
 test('returns initial stage of the game', ()=>{
   const {result} = renderHook(()=>useT3GameStage());

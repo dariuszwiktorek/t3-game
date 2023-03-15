@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Cell from "./Cell";
+import Cell from "../Cell";
 
 
 test('Cell renders its props given value',()=>{

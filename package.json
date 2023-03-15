@@ -51,8 +51,9 @@
   },
   "jest": {
     "collectCoverageFrom": [
+      "!src/**/__tests__test.d.ts",
       "src/**/*.{ts,tsx}",
-      "!src/index.ts*",
+      "!src/index.test.ts*",
       "!src/react-app-env.d.ts"
     ]
   }

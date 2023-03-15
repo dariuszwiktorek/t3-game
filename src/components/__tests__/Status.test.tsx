@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react"
-import { GameResult, GAME_TURNS_ORDER } from "../model/T3GameModel";
-import Status from "./Status"
+import { GameResult, GAME_TURNS_ORDER } from "../../model/T3GameModel";
+import Status from "../Status"
 
 
 test('Renders status for winning game',() => {
