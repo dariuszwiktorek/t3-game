@@ -51,10 +51,17 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "!src/**/__tests__test.d.ts",
       "src/**/*.{ts,tsx}",
-      "!src/index.test.ts*",
-      "!src/react-app-env.d.ts"
+      "!src/index.ts*",
+      "!src/react-app-env.d.ts",
+      "!**/__tests__/tsignore.d.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}",
+      "!**/__tests__/tsignore.d.ts"
     ]
   }
+
+  
 }

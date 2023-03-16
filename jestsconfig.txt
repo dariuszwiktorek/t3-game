@@ -14,7 +14,8 @@ module.exports = {
     "/node_modules/",
     "/lib/",
     "/dist/",
-    "*.d.ts"
+    "/*.d.ts",
+    "^((?!tsignore\\.d\\.ts$).)*$"
   ]
 
 };
